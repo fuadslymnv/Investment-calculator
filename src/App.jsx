@@ -24,7 +24,8 @@ function App() {
     <div>
       <Header />
       <UserInput userInput={userInput} onChangeInput={handleChange} />
-      <Results input={userInput} />
+      {!inputIsValid && <p className="center">Please enter valid duration year.</p> }
+      {inputIsValid && <Results input={userInput} />}
     </div>
   );
 }
